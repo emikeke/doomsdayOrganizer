@@ -15,13 +15,19 @@ const TodoList = () => {
     const newNotes = [...notes, newNote]; /// bad to mutate state in React
     setNotes(newNotes);
   }
+
+  const deleteNoteFunction = (id) => {
+    const newNotes = notes.filter((note) => note.id !== id);
+    setNotes(newNotes);
+  }
+
   return (
     <>
       <div className="background">
         <div className="container">
           <div className="notes-list">
             <AddNote handleAddNote={addNoteFunction}/>
-            {notes.map((note)=> <TodoNote id={note.id} date={note.date} text={note.text}/>)}
+            {notes.map((note)=> <TodoNote id={note.id} date={note.date} text={note.text} handleDeleteNote={deleteNoteFunction}/>)}
           </div>
         </div>
       </div>

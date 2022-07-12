@@ -42,7 +42,6 @@ code {
 
 .background {
   background-image: linear-gradient(#89CFF0, #fcc5f0);
-  opacity: 0.9;
   height: 100%;
 }
 
@@ -72,6 +71,7 @@ code {
   background-color: rgba(189,189,189,.20);
   color: white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
+  white-space: pre-wrap;
 }
 
 .body {
@@ -88,3 +88,10 @@ code {
 .trash-icon {
   text-align: right;
 }
+
+.delete-icon:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+  transition: transform .45s;
+}
+

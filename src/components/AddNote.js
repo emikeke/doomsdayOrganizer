@@ -1,12 +1,16 @@
 import {useState} from "react";
 
-const AddNote = ({handleAddNote}) => {
+const AddNote = ({handleAddNote, handleDeleteNote}) => {
   const [noteText, setNoteText] = useState("");
   const handleChange = (e) => {
     setNoteText(e.target.value);
   }
   const handleSaveClick = (e) => {
-    handleAddNote(noteText);
+    if (noteText.trim().length > 0) {
+      handleAddNote(noteText);
+      setNoteText("");
+    }
+
   }
   return (
     <div className="note new">
