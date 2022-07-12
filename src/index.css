@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.note {
+  background-color: #fef68a;
+  line-spacing: 1rem;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column; 
+  width: 300px;
+  min-height: 200px;
+}
+
+.body {
+  margin: 5px 10px;
+}
+
+.header {
+  margin: 10px 10px;
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.trash-icon {
+  text-align: right;
+}
