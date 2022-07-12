@@ -12,16 +12,66 @@ code {
     monospace;
 }
 
-.note {
-  background-color: #fef68a;
-  line-spacing: 1rem;
-  border-radius: 10px;
+.footer {
+  position: relative;
+  display:flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-right: 15px;
+}
+
+.note.new {
+  background-color: rgb(253,253,253, 0.5)
+}
+
+.textarea-container {
+  padding: 11px;
+}
+
+.textarea {
   padding: 10px;
-  margin-bottom: 10px;
+  resize: none;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(253,253,253,0.01)
+}
+
+.textarea:focus {
+  outline: none;
+}
+
+.background {
+  background-image: linear-gradient(#89CFF0, #fcc5f0);
+  opacity: 0.9;
+  height: 100%;
+}
+
+.container {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  height: 100%;
+}
+
+.notes-list {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.note {
+  border-radius: 10px;
+  padding: 5px;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   width: 300px;
   min-height: 200px;
+  position: relative;
+  background-color: rgba(189,189,189,.20);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
 }
 
 .body {

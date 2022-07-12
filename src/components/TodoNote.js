@@ -1,15 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const TodoNote = () => {
+const TodoNote = ({id, text, date}) => {
   return (
     <div className="note">
       <div className="header">
-        07/11/2022
+        {date}
         <span className="trash-icon">
           <FontAwesomeIcon icon="fa-trash" />
         </span>
       </div>
-      <span className="body">This is the body of the note. This is the body of the note.</span>
+      <span className="body">{text}</span>
     </div>
   );
 };
