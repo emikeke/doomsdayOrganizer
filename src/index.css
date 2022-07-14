@@ -85,8 +85,20 @@ code {
   justify-content: space-between;
 }
 
+.edit-icon{
+  margin-right:20px;
+}
+
+.edit-icon:hover{
+  cursor: pointer;
+  transform: scale(1.5);
+  transition: transform .45s;
+}
+
 .trash-icon {
   text-align: right;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .delete-icon:hover {
