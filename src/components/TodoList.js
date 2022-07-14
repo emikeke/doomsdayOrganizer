@@ -30,10 +30,6 @@ const TodoList = () => {
     setNotes(newNotes);
   };
 
-  const editNoteFunction = (id) => {
- 
-  };
-
   useEffect(() => {
     updateNotesFunction();
   }, [notes]);
@@ -44,7 +40,7 @@ const TodoList = () => {
         <div className="container">
           <div className="notes-list">  
             <AddNote handleAddNote={addNoteFunction}/>
-            {notes.map((note)=> <TodoNote id={note.id} text={note.text} date={note.date} handleDeleteNote={deleteNoteFunction} handleEditNote={editNoteFunction}/>)}
+            {notes.map((note, index)=> <TodoNote id={note.id} key={index} text={note.text} date={note.date} handleDeleteNote={deleteNoteFunction}/>)}
           </div>
         </div>
       </div>
