@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react';
 
-const TodoNote = ({id, text, date, handleDeleteNote}) => {
+const TodoNote = ({id, text, date, handleDeleteNote, editNoteFunction}) => {
 
   const [edit, setEdit] = useState(false);
   const [noteText, setNoteText] = useState(text);
@@ -11,6 +11,7 @@ const TodoNote = ({id, text, date, handleDeleteNote}) => {
   }
   const handleSaveClick = (e) => {
     setNoteText(noteText);
+    editNoteFunction(id, noteText);
     setEdit(false);
   }
 

@@ -16,13 +16,19 @@ const TodoList = () => {
     localStorage.setItem("react-notes-data", JSON.stringify(notes));
   };
 
+  const editNoteFunction = (id, noteText) => {
+    notes.find((note) => note.id === id).text = noteText;
+    updateNotesFunction();
+  };
+
   const addNoteFunction = (text) => {
     const date = new Date();
     const newNote = {
       id: nanoid(), text: text, date: date.toLocaleDateString()
     };
-    const newNotes = [...notes, newNote]
+    const newNotes = [...notes, newNote];
     setNotes(newNotes);
+    // setAlert();
   };
 
   const deleteNoteFunction = (id) => {
@@ -40,7 +46,7 @@ const TodoList = () => {
         <div className="container">
           <div className="notes-list">  
             <AddNote handleAddNote={addNoteFunction}/>
-            {notes.map((note, index)=> <TodoNote id={note.id} key={index} text={note.text} date={note.date} handleDeleteNote={deleteNoteFunction}/>)}
+            {notes.map((note, index)=> <TodoNote id={note.id} key={index} text={note.text} date={note.date} handleDeleteNote={deleteNoteFunction} editNoteFunction={editNoteFunction}/>)}
           </div>
         </div>
       </div>
