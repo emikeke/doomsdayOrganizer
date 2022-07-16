@@ -10,7 +10,6 @@ const TodoNote = ({id, text, date, handleDeleteNote, editNoteFunction}) => {
     setNoteText(e.target.value);
   }
   const handleSaveClick = (e) => {
-    setNoteText(noteText);
     editNoteFunction(id, noteText);
     setEdit(false);
   }
