@@ -1,15 +1,16 @@
+/* eslint-disable react/prop-types */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const TodoNote = ({id, text, date, handleDeleteNote, editNoteFunction}) => {
 
   const [edit, setEdit] = useState(false);
   const [noteText, setNoteText] = useState(text);
 
-  const handleChange = (e) => {
-    setNoteText(e.target.value);
+  const handleChange = (textAreaInput) => {
+    setNoteText(textAreaInput.target.value);
   }
-  const handleSaveClick = (e) => {
+  const handleSaveClick = () => {
     editNoteFunction(id, noteText);
     setEdit(false);
   }

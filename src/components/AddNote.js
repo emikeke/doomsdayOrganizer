@@ -1,10 +1,12 @@
-import {useState} from "react";
+/* eslint-disable react/prop-types */
+import React, {useState} from "react";
 
 const AddNote = ({handleAddNote}) => {
   const [noteText, setNoteText] = useState("");
-  const handleChange = (e) => {
-    setNoteText(e.target.value);
+  const handleChange = (textAreaInput) => {
+    setNoteText(textAreaInput.target.value);
   }
+
   const handleSaveClick = (e) => {
     if (noteText.trim().length > 0) {
       handleAddNote(noteText);
