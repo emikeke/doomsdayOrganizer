@@ -12,7 +12,7 @@ const TodoList = () => {
   };
 
   const [notes, setNotes] = useState(getNotesFunction);
-    const draggedOverNote = useRef();
+  const draggedOverNote = useRef();
 
   const dragEnter = (noteToReplace) => {
     draggedOverNote.note = noteToReplace;
@@ -41,17 +41,17 @@ const TodoList = () => {
     return message;
   };
 
-  const updateNotesFunction = () => {
+  const saveNotesFunction = () => {
     localStorage.setItem("react-notes-data", JSON.stringify(notes));
   };
 
   useEffect(() => {
-    updateNotesFunction();
+    saveNotesFunction();
   }, [notes]);
 
   const editNoteFunction = (id, noteText) => {
     notes.find((note) => note.id === id).text = noteText;
-    updateNotesFunction();
+    saveNotesFunction();
   };
 
   const addNoteFunction = (text) => {

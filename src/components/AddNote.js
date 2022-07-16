@@ -7,7 +7,7 @@ const AddNote = ({handleAddNote}) => {
     setNoteText(textAreaInput.target.value);
   }
 
-  const handleSaveClick = (e) => {
+  const handleSaveClick = () => {
     if (noteText.trim().length > 0) {
       handleAddNote(noteText);
       setNoteText("");
