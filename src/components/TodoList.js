@@ -18,14 +18,28 @@ const TodoList = () => {
     draggedOverNote.note = noteToReplace;
   };
 
-  const drop = (draggedNote) => {
-    let reorderedNotes = [...notes];
-    let draggedIndex = notes.indexOf(draggedNote);
-    let replacedIndex = notes.indexOf(draggedOverNote.note);
-    reorderedNotes[draggedIndex] = draggedOverNote.note;
-    reorderedNotes[replacedIndex] = draggedNote;
-    setNotes(reorderedNotes);
-  };
+    const drop = (draggedNote) => {
+      let reorderedNotes = [];
+      let draggedIndex = -1;
+      let replacedIndex = -1;
+      for (let i = 0; i < notes.length; i++) {
+        switch (notes[i]) {
+          case draggedNote:
+            draggedIndex = i;
+            break;
+          case draggedOverNote.note:
+            replacedIndex = i;
+            break;
+        }
+        reorderedNotes.push(notes[i]);
+      }
+      if (draggedIndex === -1 || replacedIndex === -1) {
+        return;
+      }
+      reorderedNotes[draggedIndex] = draggedOverNote.note;
+      reorderedNotes[replacedIndex] = draggedNote;
+      setNotes(reorderedNotes);
+    };
 
   useEffect(() => {
     window.addEventListener("beforeunload", handleBeforeUnload);
