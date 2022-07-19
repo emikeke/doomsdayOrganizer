@@ -13,32 +13,32 @@ const TodoList = () => {
 
   const [notes, setNotes] = useState(getNotesFunction);
   const draggedOverNote = useRef();
+  console.log(draggedOverNote, draggedOverNote.note);
 
   const dragEnter = (noteToReplace) => {
     draggedOverNote.note = noteToReplace;
   };
 
     const drop = (draggedNote) => {
-      let reorderedNotes = [];
-      let draggedIndex = -1;
-      let replacedIndex = -1;
-      for (let i = 0; i < notes.length; i++) {
-        switch (notes[i]) {
-          case draggedNote:
-            draggedIndex = i;
-            break;
-          case draggedOverNote.note:
-            replacedIndex = i;
-            break;
+      if (draggedOverNote.note) {
+        let reorderedNotes = [];
+        for (let i = 0; i < notes.length; i++) {
+          switch (notes[i]) {
+            case draggedNote:
+              console.log("banana");
+              reorderedNotes.push(draggedOverNote.note);
+              break;
+            case draggedOverNote.note:
+              console.log("orange");
+              reorderedNotes.push(draggedNote);
+              break;
+            default:
+              reorderedNotes.push(notes[i]);
+          }
         }
-        reorderedNotes.push(notes[i]);
+        draggedOverNote.note = undefined;
+        setNotes(reorderedNotes);
       }
-      if (draggedIndex === -1 || replacedIndex === -1) {
-        return;
-      }
-      reorderedNotes[draggedIndex] = draggedOverNote.note;
-      reorderedNotes[replacedIndex] = draggedNote;
-      setNotes(reorderedNotes);
     };
 
   useEffect(() => {
