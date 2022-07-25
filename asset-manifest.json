@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/emikeke.github.io/doomsdayOrganizer/static/css/main.b8e13c5d.css",
-    "main.js": "/emikeke.github.io/doomsdayOrganizer/static/js/main.46556846.js",
-    "index.html": "/emikeke.github.io/doomsdayOrganizer/index.html",
-    "main.b8e13c5d.css.map": "/emikeke.github.io/doomsdayOrganizer/static/css/main.b8e13c5d.css.map",
-    "main.46556846.js.map": "/emikeke.github.io/doomsdayOrganizer/static/js/main.46556846.js.map"
+    "main.css": "/doomsdayOrganizer/static/css/main.b8e13c5d.css",
+    "main.js": "/doomsdayOrganizer/static/js/main.46556846.js",
+    "index.html": "/doomsdayOrganizer/index.html",
+    "main.b8e13c5d.css.map": "/doomsdayOrganizer/static/css/main.b8e13c5d.css.map",
+    "main.46556846.js.map": "/doomsdayOrganizer/static/js/main.46556846.js.map"
   },
   "entrypoints": [
     "static/css/main.b8e13c5d.css",
