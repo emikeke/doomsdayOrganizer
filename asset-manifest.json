@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/doomsdayorganizer/static/css/main.5354bfc5.css",
+    "main.js": "/doomsdayorganizer/static/js/main.aed55830.js",
+    "index.html": "/doomsdayorganizer/index.html",
+    "main.5354bfc5.css.map": "/doomsdayorganizer/static/css/main.5354bfc5.css.map",
+    "main.aed55830.js.map": "/doomsdayorganizer/static/js/main.aed55830.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5354bfc5.css",
+    "static/js/main.aed55830.js"
+  ]
+}
