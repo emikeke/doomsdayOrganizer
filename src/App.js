@@ -9,7 +9,7 @@ function App() {
   return (
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<TodoList/>}/>
+          <Route path="/doomsdayOrganizer" element={<TodoList/>}/>
           <Route path="*" element={<Error/>}/>
         </Routes>
       </BrowserRouter>
