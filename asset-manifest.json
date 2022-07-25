@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/doomsdayOrganizer/static/css/main.b8e13c5d.css",
-    "main.js": "/doomsdayOrganizer/static/js/main.46556846.js",
+    "main.js": "/doomsdayOrganizer/static/js/main.fea490b4.js",
     "index.html": "/doomsdayOrganizer/index.html",
     "main.b8e13c5d.css.map": "/doomsdayOrganizer/static/css/main.b8e13c5d.css.map",
-    "main.46556846.js.map": "/doomsdayOrganizer/static/js/main.46556846.js.map"
+    "main.fea490b4.js.map": "/doomsdayOrganizer/static/js/main.fea490b4.js.map"
   },
   "entrypoints": [
     "static/css/main.b8e13c5d.css",
-    "static/js/main.46556846.js"
+    "static/js/main.fea490b4.js"
   ]
 }
