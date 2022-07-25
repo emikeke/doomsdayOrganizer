@@ -7,7 +7,7 @@ import Error from './components/Error';
 function App() {
 
   return (
-      <BrowserRouter basename={window.location.pathname || ''}>
+      <BrowserRouter >
         <Routes>
           <Route exact path="/doomsdayOrganizer" element={<TodoList/>}/>
           <Route path="*" element={<Error/>}/>
