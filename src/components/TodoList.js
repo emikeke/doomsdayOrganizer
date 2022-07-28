@@ -13,7 +13,6 @@ const TodoList = () => {
 
   const [notes, setNotes] = useState(getNotesFunction);
   const draggedOverNote = useRef();
-  console.log(draggedOverNote, draggedOverNote.note);
 
   const dragEnter = (noteToReplace) => {
     draggedOverNote.note = noteToReplace;
@@ -83,7 +82,7 @@ const TodoList = () => {
   };
 
   return (
-    <>
+    <div data-testid="todo-1">
       <div className="background">
         <div className="container">
           <div className="notes-list">
@@ -102,7 +101,7 @@ const TodoList = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

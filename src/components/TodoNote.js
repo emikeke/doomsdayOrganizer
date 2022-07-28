@@ -16,6 +16,7 @@ const TodoNote = ({id, text, date, handleDeleteNote, editNoteFunction}) => {
   }
 
   return (
+    <div data-testid="todo-1">
     <div className="note" key={id}>
       <div className="header">
         {date}
@@ -25,11 +26,12 @@ const TodoNote = ({id, text, date, handleDeleteNote, editNoteFunction}) => {
         </span>
       </div>
       {edit ? 
-      <>
+      <div data-testid="divWeWantToShow">
         <textarea className="textarea" rows="8" cols="29" placeholder="Type here to add a note..." value={noteText} onChange={handleChange}></textarea>
         <div className="footer-edit"><button className="save" onClick={handleSaveClick}>Save</button></div>
-      </>
+      </div>
       : <span className="body">{noteText}</span>}
+    </div>
     </div>
   );
 };

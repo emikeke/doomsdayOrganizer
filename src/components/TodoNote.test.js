@@ -1,13 +1,24 @@
+/** @jest-environment jsdom */
 import React from "react";
-import {render} from "@testing-library/react";
-import TodoNote from "./AddNote";
+import {render, screen} from "@testing-library/react";
 
-const todoListData = [
-  {id: 1, text: "wash up"},
-  {id: 2, text: "eat some cheese"},
-  {id: 3, text: "take a nap"}
-]
+import TodoNote from "./TodoList";
 
-it("should render an array of to do notes", () => {
+jest.mock("nanoid", () => {
+  return {nanoid: () => "12345"};
+});
 
-})
+it("should render a to do note component", () => {
+  render(<TodoNote/>);
+});
+
+it("should render a save button", () => {
+  render(<TodoNote/>);
+  screen.getByText("Save");
+});
+
+it("should render edit div", () => {
+  const {queryByTestId} = render(<TodoNote setEdit={true}/>);
+  const div = queryByTestId("divWeWantToShow");
+  expect(div).toBeTruthy();
+});
