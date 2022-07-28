@@ -1,6 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import TodoNote from "./TodoNote";
-import "../index.css";
+//import "../index.css";
 import React, {useState, useEffect, useRef} from "react";
 import {nanoid} from "nanoid";
 import AddNote from "./AddNote";
